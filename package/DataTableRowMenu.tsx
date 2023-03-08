@@ -45,6 +45,16 @@ export default function DataTableRowMenu({
 
   const { classes } = useStyles();
 
+  // const top = desiredY + height + mdSpacing > windowHeight ? windowHeight - height - mdSpacing : desiredY
+  // const left = dir === 'ltr'
+  //   ? desiredX + width + mdSpacing > windowWidth
+  //   ? windowWidth - width - mdSpacing
+  //   : desiredX
+  // : windowWidth - mdSpacing - (desiredX - width - mdSpacing < 0 ? width + mdSpacing : desiredX)
+
+  const top = 0;
+  const left = 0;
+
   return (
     <Paper
       ref={ref}
@@ -53,13 +63,8 @@ export default function DataTableRowMenu({
       className={classes.root}
       sx={{
         zIndex,
-        top: desiredY + height + mdSpacing > windowHeight ? windowHeight - height - mdSpacing : desiredY,
-        left:
-          dir === 'ltr'
-            ? desiredX + width + mdSpacing > windowWidth
-              ? windowWidth - width - mdSpacing
-              : desiredX
-            : windowWidth - mdSpacing - (desiredX - width - mdSpacing < 0 ? width + mdSpacing : desiredX),
+        top,
+        left,
       }}
     >
       {children}
