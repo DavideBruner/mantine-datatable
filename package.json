@@ -14,7 +14,8 @@
     "dev": "turbo run dev --parallel --no-daemon",
     "start": "npx serve docs/out",
     "lint": "turbo run lint --no-daemon",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "@faker-js/faker": "^7.6.0",
